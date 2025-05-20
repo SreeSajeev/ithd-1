@@ -1,0 +1,194 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: sans-serif;
+  }
+}
+
+/* Custom styles for the IT Helpdesk */
+.helpdesk-bg {
+  background: linear-gradient(to bottom, #10002b, #240046);
+}
+
+.text-glow {
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 
+               0 0 8px rgba(77, 213, 254, 0.2);
+}
+
+.button-glow {
+  background: rgba(77, 158, 254, 0.6);
+  box-shadow: 0 0 10px rgba(77, 158, 254, 0.7),
+              0 0 20px rgba(77, 158, 254, 0.4);
+  transition: all 0.3s ease;
+}
+
+.button-glow:hover {
+  background: rgba(77, 158, 254, 0.8);
+  box-shadow: 0 0 15px rgba(77, 158, 254, 0.9),
+              0 0 30px rgba(77, 158, 254, 0.6);
+}
+
+.form-container {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(to bottom, rgba(25, 10, 55, 0.95), rgba(45, 20, 90, 0.95));
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.form-label {
+  color: #C3D9F0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.form-input {
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666666'%3e%3cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3e%3c/path%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1rem;
+}
+
+/* Login page styles */
+.login-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+.login-left {
+  background-color: #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-right {
+  background: linear-gradient(to bottom, #10002b, #240046);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 320px;
+  padding: 2rem;
+}
+
+.login-title {
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 
+               0 0 8px rgba(77, 213, 254, 0.2);
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.login-box {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(to bottom, rgba(25, 10, 55, 0.95), rgba(45, 20, 90, 0.95));
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.login-button {
+  background: rgba(77, 158, 254, 0.6);
+  box-shadow: 0 0 10px rgba(77, 158, 254, 0.7),
+              0 0 20px rgba(77, 158, 254, 0.4);
+  transition: all 0.3s ease;
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 6px;
+  color: white;
+  font-weight: 500;
+  margin-top: 1rem;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-button:hover {
+  background: rgba(77, 158, 254, 0.8);
+  box-shadow: 0 0 15px rgba(77, 158, 254, 0.9),
+              0 0 30px rgba(77, 158, 254, 0.6);
+}
+
+.forgot-password {
+  color: rgba(77, 213, 254, 0.8);
+  font-size: 0.8rem;
+  text-align: right;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  color: rgba(77, 213, 254, 1);
+  text-decoration: underline;
+}
+
+.login-field {
+  margin-bottom: 1.5rem;
+}
+
+/* New additions for textarea and file input */
+textarea.form-input {
+  min-height: 120px;
+  resize: vertical;
+}
